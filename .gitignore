@@ -43,12 +43,14 @@ chroma_db/
 Thumbs.db
 desktop.ini
 
-# Logs & scratch
+# Logs, scratch & internal planning/demo notes
 *.log
 *.tmp
 logs/
 artifacts/
 implementation_plan.md
+demo/
+docs/PROJECT_PLAN.md
 
 # Tooling & caches
 .ruff_cache/

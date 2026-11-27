@@ -26,7 +26,7 @@ The included contracts and invoices are synthetic fixtures with deliberately inj
 
 The primary workflow is an evidence-gated monthly-cap decision rather than generic RAG or static reporting. For a named vendor, Proviso retrieves the cited contractual monthly cap, aggregates that vendor's contract-valid invoices by calendar month, and reports the specific months and variance amounts that breach the term. It intentionally declines to decide—and escalates for human review—when the vendor identity is ambiguous, the scope is missing, or an alleged amendment is absent from the indexed evidence.
 
-See [`demo/90_second_demo.md`](demo/90_second_demo.md) for the walkthrough sequence and [`evaluation/README.md`](evaluation/README.md) for the test protocol and calibration report.
+See [`evaluation/README.md`](evaluation/README.md) for the test protocol and calibration report.
 
 ### Engineering Finding: Similarity Is Not Vendor Identity
 
@@ -226,7 +226,7 @@ python evaluation/evaluate_cap_detection.py
 
 The full API evaluation (`python evaluation/run_evaluation.py`) executes all 43 cases against the live backend and consumes Gemini API quota.
 
-For detailed architecture and API specifications, see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), [`docs/API_REFERENCE.md`](docs/API_REFERENCE.md), and [`docs/PROJECT_PLAN.md`](docs/PROJECT_PLAN.md).
+For detailed architecture and API specifications, see [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) and [`docs/API_REFERENCE.md`](docs/API_REFERENCE.md).
 
 ---
 
