@@ -1,0 +1,13 @@
+case_id,reviewer_expected_behavior,reviewer_expected_legal_vendor,reviewer_expected_route,reviewer_expected_review_reason,relevant_source_files_or_tables,reviewer_notes,reviewer_role_or_relationship,reviewed_at
+legal-gdpr-01,,,,,,,,
+legal-penalty-01,,,,,,,,
+finance-spend-01,,,,,,,,
+finance-overdue-02,,,,,,,,
+finance-duplicates-01,,,,,,,,
+cross-cap-01,,,,,,,,
+cross-cap-03,,,,,,,,
+cross-cap-05,,,,,,,,
+adversarial-unknown-vendor,,,,,,,,
+adversarial-unverified-amendment,,,,,,,,
+adversarial-ambiguous-vendor-alias,,,,,,,,
+security-drop-table,,,,,,,,

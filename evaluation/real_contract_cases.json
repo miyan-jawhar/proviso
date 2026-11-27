@@ -1,0 +1,93 @@
+{
+  "description": "Held-out evaluation cases for multi-currency real-contract-style fixtures",
+  "disclaimer": "Demonstration fixtures modelled on public-domain contract structures. Not actual contracts. Results are extraction behaviour tests, not production accuracy evidence.",
+  "corpus": "real",
+  "cases": [
+    {
+      "id": "real_001",
+      "query": "What is the monthly billing cap for Meridian Technology Solutions LLC?",
+      "category": "legal_ground_truth",
+      "corpus": "real",
+      "expected_cap_amount": 45000,
+      "expected_currency": "USD",
+      "expected_vendor": "Meridian Technology Solutions LLC",
+      "legal_ground_truth": {
+        "has_monthly_cap": true,
+        "cap_amount": 45000,
+        "currency": "USD",
+        "clause_contains": "maximum monthly billing cap of USD 45,000",
+        "source_file": "gsa_it_services_v1.txt"
+      }
+    },
+    {
+      "id": "real_002",
+      "query": "Does TechOps Consulting Group have a not-to-exceed monthly amount?",
+      "category": "legal_ground_truth",
+      "corpus": "real",
+      "expected_cap_amount": 78000,
+      "expected_currency": "USD",
+      "expected_vendor": "TechOps Consulting Group Inc.",
+      "legal_ground_truth": {
+        "has_monthly_cap": true,
+        "cap_amount": 78000,
+        "currency": "USD",
+        "clause_contains": "total monthly not-to-exceed amount",
+        "source_file": "edgar_msa_tech_v2.txt"
+      }
+    },
+    {
+      "id": "real_003",
+      "query": "What is the maximum monthly fee for Digital Transformation Partners Ltd?",
+      "category": "legal_ground_truth",
+      "corpus": "real",
+      "expected_cap_amount": 85000,
+      "expected_currency": "GBP",
+      "expected_vendor": "Digital Transformation Partners Ltd",
+      "legal_ground_truth": {
+        "has_monthly_cap": true,
+        "cap_amount": 85000,
+        "currency": "GBP",
+        "clause_contains": "maximum monthly fee of £85,000",
+        "source_file": "uk_vendor_services_v3.txt"
+      }
+    },
+    {
+      "id": "real_004",
+      "query": "Is EuroTech Consulting GmbH GDPR compliant?",
+      "category": "legal_ground_truth",
+      "corpus": "real",
+      "expected_vendor": "EuroTech Consulting GmbH",
+      "legal_ground_truth": {
+        "has_gdpr_equivalent": true,
+        "has_data_processing_agreement": true,
+        "source_file": "eur_consulting_v4.txt"
+      }
+    },
+    {
+      "id": "real_005",
+      "query": "Does Infra Solutions Private Limited have a data protection agreement?",
+      "category": "legal_ground_truth",
+      "corpus": "real",
+      "expected_vendor": "Infra Solutions Private Limited",
+      "legal_ground_truth": {
+        "has_gdpr_equivalent": false,
+        "has_data_processing_agreement": false,
+        "risk_level": "HIGH",
+        "source_file": "inr_enterprise_v5.txt"
+      }
+    },
+    {
+      "id": "real_006",
+      "query": "What is the late payment penalty rate for Digital Transformation Partners Ltd?",
+      "category": "legal_ground_truth",
+      "corpus": "real",
+      "expected_vendor": "Digital Transformation Partners Ltd",
+      "legal_ground_truth": {
+        "late_payment_rate": 8.0,
+        "unit": "percent_per_annum",
+        "risk_level": "LOW",
+        "note": "UK statutory rate under Late Payment of Commercial Debts Act, not a typical monthly percentage"
+      }
+    }
+  ]
+}

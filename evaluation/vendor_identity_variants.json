@@ -1,0 +1,71 @@
+{
+  "protocol": "Entity references may bind only when a normalized explicit name span equals one indexed legal vendor. Punctuation and '&'/'and' normalize; legal-suffix changes, DBAs, subsidiaries, partial names, typos, and aliases require an approved mapping or human review.",
+  "cases": [
+    {
+      "id": "normalized-punctuation",
+      "query": "Review Mcclain Miller and Henderson for contract-cap compliance.",
+      "expected_behavior": "match",
+      "expected_vendor": "Mcclain, Miller and Henderson"
+    },
+    {
+      "id": "normalized-conjunction",
+      "query": "Review Mcclain, Miller & Henderson for contract-cap compliance.",
+      "expected_behavior": "match",
+      "expected_vendor": "Mcclain, Miller and Henderson"
+    },
+    {
+      "id": "normalized-ampersand",
+      "query": "Audit Davis & Sons for its monthly cap.",
+      "expected_behavior": "match",
+      "expected_vendor": "Davis and Sons"
+    },
+    {
+      "id": "exact-legal-suffix",
+      "query": "Review Doyle Ltd for GDPR obligations.",
+      "expected_behavior": "match",
+      "expected_vendor": "Doyle Ltd"
+    },
+    {
+      "id": "normalized-comma-and",
+      "query": "Review Rodriguez, Figueroa & Sanchez for payment terms.",
+      "expected_behavior": "match",
+      "expected_vendor": "Rodriguez, Figueroa and Sanchez"
+    },
+    {
+      "id": "exact-plc",
+      "query": "Review Ryan PLC for its late-payment penalty.",
+      "expected_behavior": "match",
+      "expected_vendor": "Ryan PLC"
+    },
+    {
+      "id": "typo",
+      "query": "Review Mcclain, Miller & Hendrsn for contract-cap compliance.",
+      "expected_behavior": "human_review"
+    },
+    {
+      "id": "legal-suffix-conflict",
+      "query": "Review Doyle Limited for GDPR obligations.",
+      "expected_behavior": "human_review"
+    },
+    {
+      "id": "subsidiary-modifier",
+      "query": "Audit Davis and Sons India for its monthly cap.",
+      "expected_behavior": "human_review"
+    },
+    {
+      "id": "dba-reference",
+      "query": "Review Northstar DBA Doyle Ltd for GDPR obligations.",
+      "expected_behavior": "human_review"
+    },
+    {
+      "id": "partial-name",
+      "query": "Review Henderson for monthly-cap compliance.",
+      "expected_behavior": "human_review"
+    },
+    {
+      "id": "initials-alias",
+      "query": "Review M. M. Henderson for monthly-cap compliance.",
+      "expected_behavior": "human_review"
+    }
+  ]
+}

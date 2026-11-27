@@ -1,0 +1,28 @@
+GENERAL SERVICES ADMINISTRATION — SCHEDULE 70 IT SERVICES
+Contract Number: GS-35F-DEMO001
+Vendor: Meridian Technology Solutions LLC
+Effective Date: January 1, 2023
+Expiry Date: December 31, 2025
+
+ARTICLE 7 — PAYMENT TERMS AND BILLING LIMITATIONS
+
+7.1 Monthly Service Fee Cap
+The maximum monthly billing cap of USD 45,000 applies to all professional
+services rendered under this agreement. Invoices exceeding this amount in any
+calendar month shall be subject to dispute resolution under Article 12.
+
+7.2 Late Payment Penalty
+In the event of payment delay exceeding 30 days from invoice date, a late
+payment fee of 1.5% per month shall be applied to the outstanding balance.
+
+7.3 Data Protection
+Vendor agrees to maintain compliance with applicable federal data protection
+requirements under FISMA and applicable state privacy regulations. A Data
+Processing Agreement addendum is incorporated herein as Exhibit B.
+
+ARTICLE 11 — TERMINATION
+Either party may terminate this agreement with 90 days written notice.
+Early termination by Client shall incur a fee not to exceed $12,000.
+
+NOTE: Demonstration fixture modelled on GSA Schedule 70 contract structure.
+Not an actual government procurement document.

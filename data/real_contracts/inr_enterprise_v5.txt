@@ -1,0 +1,30 @@
+ENTERPRISE TECHNOLOGY SERVICES AGREEMENT
+Agreement No.: ETSA/2023/INR/0892
+Service Provider: Infra Solutions Private Limited
+Client: Global Enterprises Limited
+Effective Date: April 1, 2023
+Expiry Date: March 31, 2026
+
+CLAUSE 7: PAYMENT AND BILLING
+
+7.1 Monthly Cap
+The maximum monthly billing cap of INR 18,00,000 (Eighteen Lakh) applies
+to all professional IT services rendered under this Agreement, excluding GST.
+
+7.2 Late Fees
+In case of payment delay beyond 45 days, the Service Provider may levy a
+late fee of 1.8% per month on the outstanding amount.
+
+CLAUSE 11: DATA PROTECTION
+Both parties agree to comply with the Information Technology Act, 2000, the
+IT (Amendment) Act 2008, and applicable Personal Data Protection guidelines.
+No personal data processing agreement is currently in place pending
+finalization of India's Digital Personal Data Protection Act 2023 framework.
+
+CLAUSE 15: TERMINATION
+Either party may terminate this agreement by providing 60 days written
+notice. Premature termination by Client shall attract a penalty not exceeding
+INR 5,00,000.
+
+NOTE: Demonstration fixture modelled on Indian IT services agreement structure.
+Not an actual contract.

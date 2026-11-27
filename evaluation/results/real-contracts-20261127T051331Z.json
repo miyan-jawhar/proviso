@@ -1,0 +1,100 @@
+{
+  "timestamp": "20261127T051331Z",
+  "disclaimer": "Demonstration fixtures only. Not evidence of production accuracy.",
+  "summary": {
+    "total": 5,
+    "cap_extraction_recall": "5/5",
+    "gdpr_detection_accuracy": "4/5",
+    "late_fee_recall": "5/5"
+  },
+  "results": [
+    {
+      "filename": "gsa_it_services_v1.txt",
+      "vendor_name": "Meridian Technology Solutions LLC",
+      "currency": "USD",
+      "expected_cap": 45000,
+      "expected_gdpr": true,
+      "expected_late_fee": 1.5,
+      "extracted_caps": [
+        45000,
+        1,
+        12000
+      ],
+      "cap_extraction_pass": true,
+      "cap_extraction_note": "PASS",
+      "gdpr_detected": true,
+      "gdpr_extraction_pass": true,
+      "late_fee_detected": 1.5,
+      "late_fee_extraction_pass": true
+    },
+    {
+      "filename": "edgar_msa_tech_v2.txt",
+      "vendor_name": "TechOps Consulting Group Inc.",
+      "currency": "USD",
+      "expected_cap": 78000,
+      "expected_gdpr": true,
+      "expected_late_fee": 2.0,
+      "extracted_caps": [
+        78000
+      ],
+      "cap_extraction_pass": true,
+      "cap_extraction_note": "PASS",
+      "gdpr_detected": true,
+      "gdpr_extraction_pass": true,
+      "late_fee_detected": 2.0,
+      "late_fee_extraction_pass": true
+    },
+    {
+      "filename": "uk_vendor_services_v3.txt",
+      "vendor_name": "Digital Transformation Partners Ltd",
+      "currency": "GBP",
+      "expected_cap": 85000,
+      "expected_gdpr": true,
+      "expected_late_fee": 8.0,
+      "extracted_caps": [
+        85000
+      ],
+      "cap_extraction_pass": true,
+      "cap_extraction_note": "PASS",
+      "gdpr_detected": true,
+      "gdpr_extraction_pass": true,
+      "late_fee_detected": 8.0,
+      "late_fee_extraction_pass": true
+    },
+    {
+      "filename": "eur_consulting_v4.txt",
+      "vendor_name": "EuroTech Consulting GmbH",
+      "currency": "EUR",
+      "expected_cap": 62000,
+      "expected_gdpr": true,
+      "expected_late_fee": 3.0,
+      "extracted_caps": [
+        62000
+      ],
+      "cap_extraction_pass": true,
+      "cap_extraction_note": "PASS",
+      "gdpr_detected": true,
+      "gdpr_extraction_pass": true,
+      "late_fee_detected": 3.0,
+      "late_fee_extraction_pass": true
+    },
+    {
+      "filename": "inr_enterprise_v5.txt",
+      "vendor_name": "Infra Solutions Private Limited",
+      "currency": "INR",
+      "expected_cap": 1800000,
+      "expected_gdpr": false,
+      "expected_late_fee": 1.8,
+      "extracted_caps": [
+        1800000,
+        1
+      ],
+      "cap_extraction_pass": true,
+      "cap_extraction_note": "PASS",
+      "gdpr_detected": true,
+      "gdpr_extraction_pass": false,
+      "late_fee_detected": 1.8,
+      "late_fee_extraction_pass": true
+    }
+  ]
+}

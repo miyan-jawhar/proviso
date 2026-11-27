@@ -1,0 +1,746 @@
+{
+  "run_at": "2026-07-20T19:07:35.887818+00:00",
+  "api_url": "http://localhost:8000",
+  "manifest": "C:\\Users\\admin\\OneDrive\\\u6587\u6863\\Project\\evaluation\\cases.json",
+  "summary": {
+    "case_pass_rate": 100.0,
+    "routing_accuracy": 100.0,
+    "citation_recall_at_k": 100.0,
+    "sql_trace_coverage": 100.0,
+    "answer_assertion_coverage": 100.0,
+    "safety_rejection_rate": null,
+    "human_review_handoff_rate": 100.0,
+    "unsafe_uncertainty_conclusion_rate": 0.0,
+    "clear_case_false_abstention_rate": null
+  },
+  "records": [
+    {
+      "id": "adversarial-unknown-vendor",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "'Quantum Meridian Holdings' does not match an unambiguous legal vendor identifier in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "unrecognized_vendor_identifier",
+          "reason": "'Quantum Meridian Holdings' does not match an unambiguous legal vendor identifier in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 'Quantum Meridian Holdings' does not match an unambiguous legal vendor identifier in the indexed contract corpus.\n\n### Recommended action\n- Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination."
+    },
+    {
+      "id": "adversarial-ambiguous-cap",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-unverified-amendment",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-conflicting-contract-versions",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-ambiguous-vendor-alias",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-unknown-vendor-02",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "'Atlas Strategic Partners' does not match an unambiguous legal vendor identifier in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "unrecognized_vendor_identifier",
+          "reason": "'Atlas Strategic Partners' does not match an unambiguous legal vendor identifier in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 'Atlas Strategic Partners' does not match an unambiguous legal vendor identifier in the indexed contract corpus.\n\n### Recommended action\n- Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination."
+    },
+    {
+      "id": "adversarial-unknown-vendor-03",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "'Northstar Procurement Services' does not match an unambiguous legal vendor identifier in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "unrecognized_vendor_identifier",
+          "reason": "'Northstar Procurement Services' does not match an unambiguous legal vendor identifier in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 'Northstar Procurement Services' does not match an unambiguous legal vendor identifier in the indexed contract corpus.\n\n### Recommended action\n- Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination."
+    },
+    {
+      "id": "adversarial-unknown-vendor-04",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "'Everline Data Systems' does not match an unambiguous legal vendor identifier in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "unrecognized_vendor_identifier",
+          "reason": "'Everline Data Systems' does not match an unambiguous legal vendor identifier in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 'Everline Data Systems' does not match an unambiguous legal vendor identifier in the indexed contract corpus.\n\n### Recommended action\n- Provide the vendor's legal name, an approved alias mapping, or the executed contract before making a compliance determination."
+    },
+    {
+      "id": "adversarial-missing-scope-02",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-missing-scope-03",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-missing-scope-04",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-unverified-side-letter",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-unverified-waiver",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-unverified-change-order",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-conflicting-version-02",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-conflicting-version-03",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-conflicting-version-04",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [
+        "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus."
+      ],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "legal_agent",
+          "reason_code": "missing_authoritative_document",
+          "reason": "The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **legal_agent** \u2014 The question relies on an amendment, draft, side letter, waiver, or other document that is not verified in the indexed contract corpus.\n\n### Recommended action\n- Attach or identify the executed amendment and effective date before making a compliance or payment-cap determination."
+    },
+    {
+      "id": "adversarial-ambiguous-vendor-alias-02",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-ambiguous-vendor-alias-03",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    },
+    {
+      "id": "adversarial-ambiguous-vendor-alias-04",
+      "category": "adversarial_uncertainty",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [],
+      "error_log": [],
+      "review_escalations": [
+        {
+          "status": "human_review_required",
+          "agent": "supervisor",
+          "reason_code": "missing_subject_or_period",
+          "reason": "A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.",
+          "confidence": null,
+          "confidence_threshold": null,
+          "recommended_action": "Provide the vendor's legal name and the month or date range to compare against the applicable contract cap.",
+          "blocking": true
+        }
+      ],
+      "answer_preview": "## Human Review Required\n\nThe system is declining to make a compliance or payment conclusion from incomplete or unverified evidence.\n\n### Review reasons\n- **supervisor** \u2014 A payment-cap conclusion needs an identified vendor and the relevant contract period; the request does not provide enough scope.\n\n### Recommended action\n- Provide the vendor's legal name and the month or date range to compare against the applicable contract cap."
+    }
+  ]
+}

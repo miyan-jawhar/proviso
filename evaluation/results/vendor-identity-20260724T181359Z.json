@@ -1,0 +1,144 @@
+{
+  "case_count": 12,
+  "passed_cases": 12,
+  "match_acceptance_rate": 1.0,
+  "safe_escalation_rate": 1.0,
+  "unsafe_binding_rate": 0.0,
+  "unresolved_case_count": 0,
+  "false_binding_cases": [],
+  "unresolved_cases": [],
+  "case_results": [
+    {
+      "id": "normalized-punctuation",
+      "query": "Review Mcclain Miller and Henderson for contract-cap compliance.",
+      "expected_behavior": "match",
+      "expected_vendor": "Mcclain, Miller and Henderson",
+      "observed_behavior": "match",
+      "matched_vendor": "Mcclain, Miller and Henderson",
+      "review_candidate": null,
+      "passed": true
+    },
+    {
+      "id": "normalized-conjunction",
+      "query": "Review Mcclain, Miller & Henderson for contract-cap compliance.",
+      "expected_behavior": "match",
+      "expected_vendor": "Mcclain, Miller and Henderson",
+      "observed_behavior": "match",
+      "matched_vendor": "Mcclain, Miller and Henderson",
+      "review_candidate": null,
+      "passed": true
+    },
+    {
+      "id": "normalized-ampersand",
+      "query": "Audit Davis & Sons for its monthly cap.",
+      "expected_behavior": "match",
+      "expected_vendor": "Davis and Sons",
+      "observed_behavior": "match",
+      "matched_vendor": "Davis and Sons",
+      "review_candidate": null,
+      "passed": true
+    },
+    {
+      "id": "exact-legal-suffix",
+      "query": "Review Doyle Ltd for GDPR obligations.",
+      "expected_behavior": "match",
+      "expected_vendor": "Doyle Ltd",
+      "observed_behavior": "match",
+      "matched_vendor": "Doyle Ltd",
+      "review_candidate": null,
+      "passed": true
+    },
+    {
+      "id": "normalized-comma-and",
+      "query": "Review Rodriguez, Figueroa & Sanchez for payment terms.",
+      "expected_behavior": "match",
+      "expected_vendor": "Rodriguez, Figueroa and Sanchez",
+      "observed_behavior": "match",
+      "matched_vendor": "Rodriguez, Figueroa and Sanchez",
+      "review_candidate": null,
+      "passed": true
+    },
+    {
+      "id": "exact-plc",
+      "query": "Review Ryan PLC for its late-payment penalty.",
+      "expected_behavior": "match",
+      "expected_vendor": "Ryan PLC",
+      "observed_behavior": "match",
+      "matched_vendor": "Ryan PLC",
+      "review_candidate": null,
+      "passed": true
+    },
+    {
+      "id": "typo",
+      "query": "Review Mcclain, Miller & Hendrsn for contract-cap compliance.",
+      "expected_behavior": "human_review",
+      "expected_vendor": null,
+      "observed_behavior": "human_review",
+      "matched_vendor": null,
+      "review_candidate": "Mcclain Miller Hendrsn",
+      "passed": true
+    },
+    {
+      "id": "legal-suffix-conflict",
+      "query": "Review Doyle Limited for GDPR obligations.",
+      "expected_behavior": "human_review",
+      "expected_vendor": null,
+      "observed_behavior": "human_review",
+      "matched_vendor": null,
+      "review_candidate": "Doyle Limited",
+      "passed": true
+    },
+    {
+      "id": "subsidiary-modifier",
+      "query": "Audit Davis and Sons India for its monthly cap.",
+      "expected_behavior": "human_review",
+      "expected_vendor": null,
+      "observed_behavior": "human_review",
+      "matched_vendor": null,
+      "review_candidate": "Davis and Sons India",
+      "passed": true
+    },
+    {
+      "id": "dba-reference",
+      "query": "Review Northstar DBA Doyle Ltd for GDPR obligations.",
+      "expected_behavior": "human_review",
+      "expected_vendor": null,
+      "observed_behavior": "human_review",
+      "matched_vendor": null,
+      "review_candidate": "Northstar DBA Doyle Ltd",
+      "passed": true
+    },
+    {
+      "id": "partial-name",
+      "query": "Review Henderson for monthly-cap compliance.",
+      "expected_behavior": "human_review",
+      "expected_vendor": null,
+      "observed_behavior": "human_review",
+      "matched_vendor": null,
+      "review_candidate": "Henderson",
+      "passed": true
+    },
+    {
+      "id": "initials-alias",
+      "query": "Review M. M. Henderson for monthly-cap compliance.",
+      "expected_behavior": "human_review",
+      "expected_vendor": null,
+      "observed_behavior": "human_review",
+      "matched_vendor": null,
+      "review_candidate": "M M Henderson",
+      "passed": true
+    }
+  ],
+  "evaluated_at": "2026-07-24T18:13:59.894922+00:00",
+  "evaluation_type": "synthetic_entity_gate_boundary",
+  "protocol": "Entity references may bind only when a normalized explicit name span equals one indexed legal vendor. Punctuation and '&'/'and' normalize; legal-suffix changes, DBAs, subsidiaries, partial names, typos, and aliases require an approved mapping or human review.",
+  "inputs": {
+    "contracts_sha256": "ebe2c1724b9288d4cd057b6e0f7ad6681a5178e39a26f93999e0c30ac36b90f2",
+    "variant_manifest_sha256": "b9c440ebc97148910da6643b1a6c53b828f259bf8a328e7096539d64227a8a0a"
+  },
+  "limitations": [
+    "The variants are hand-authored synthetic probes, not a representative sample of enterprise master-data quality.",
+    "The current policy intentionally favors safe escalation over fuzzy matching; approved alias resolution requires a governed alias registry that Proviso does not yet implement.",
+    "This evaluates entity binding before semantic retrieval and does not measure downstream retrieval quality."
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "eligible_vendor_months": 1145,
+  "contract_valid_invoices": 10015,
+  "confusion_matrix": {
+    "true_positive": 30,
+    "false_positive": 0,
+    "false_negative": 0,
+    "true_negative": 1115
+  },
+  "metrics": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "specificity": 1.0,
+    "breach_prevalence": 0.026201,
+    "matched_breach_detail_rate": 1.0
+  },
+  "ground_truth_breaches": 30,
+  "detected_breaches": 30,
+  "detail_matches": 30,
+  "false_positive_records": [],
+  "false_negative_records": [],
+  "detected_breach_records": [
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2024-04",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 715616.37,
+      "excess": 259446.37,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2024-07",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 667771.34,
+      "excess": 211601.34,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2025-12",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 631719.39,
+      "excess": 175549.39,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2026-03",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 759523.58,
+      "excess": 303353.58,
+      "invoice_count": 10,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2025-10",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 644925.34,
+      "excess": 147467.34,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2026-01",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 698846.09,
+      "excess": 201388.09,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2026-02",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 793648.91,
+      "excess": 296190.91,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2027-05",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 773901.97,
+      "excess": 276443.97,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 5,
+      "vendor_name": "Guzman, Hoffman and Baldwin",
+      "month": "2026-09",
+      "monthly_cap": 1885185.0,
+      "monthly_invoiced": 2462298.12,
+      "excess": 577113.12,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 5,
+      "vendor_name": "Guzman, Hoffman and Baldwin",
+      "month": "2027-07",
+      "monthly_cap": 1885185.0,
+      "monthly_invoiced": 2886191.57,
+      "excess": 1001006.57,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 21,
+      "vendor_name": "Gray-Mayo",
+      "month": "2024-01",
+      "monthly_cap": 3599817.0,
+      "monthly_invoiced": 5595386.34,
+      "excess": 1995569.34,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 21,
+      "vendor_name": "Gray-Mayo",
+      "month": "2024-06",
+      "monthly_cap": 3599817.0,
+      "monthly_invoiced": 5662476.56,
+      "excess": 2062659.56,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2026-04",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 389656.7,
+      "excess": 79226.7,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2027-06",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 393003.33,
+      "excess": 82573.33,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2027-10",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 444780.66,
+      "excess": 134350.66,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2027-12",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 450758.64,
+      "excess": 140328.64,
+      "invoice_count": 9,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 38,
+      "vendor_name": "Baker, Mason and White",
+      "month": "2026-04",
+      "monthly_cap": 1923474.0,
+      "monthly_invoiced": 2979063.17,
+      "excess": 1055589.17,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 38,
+      "vendor_name": "Baker, Mason and White",
+      "month": "2026-06",
+      "monthly_cap": 1923474.0,
+      "monthly_invoiced": 2568484.8,
+      "excess": 645010.8,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2024-01",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 442041.41,
+      "excess": 124265.41,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2024-02",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 437690.68,
+      "excess": 119914.68,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2025-01",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 399413.35,
+      "excess": 81637.35,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2025-06",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 474294.51,
+      "excess": 156518.51,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2025-08",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 555518.22,
+      "excess": 111961.22,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2025-10",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 599188.97,
+      "excess": 155631.97,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2026-02",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 682035.84,
+      "excess": 238478.84,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2026-03",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 583697.16,
+      "excess": 140140.16,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 48,
+      "vendor_name": "Martin, Rose and Obrien",
+      "month": "2024-06",
+      "monthly_cap": 4501196.0,
+      "monthly_invoiced": 6117841.23,
+      "excess": 1616645.23,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 48,
+      "vendor_name": "Martin, Rose and Obrien",
+      "month": "2025-01",
+      "monthly_cap": 4501196.0,
+      "monthly_invoiced": 7021725.46,
+      "excess": 2520529.46,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 50,
+      "vendor_name": "Harris, Collins and Carney",
+      "month": "2027-06",
+      "monthly_cap": 4420752.0,
+      "monthly_invoiced": 7015974.18,
+      "excess": 2595222.18,
+      "invoice_count": 8,
+      "is_breach": true
+    },
+    {
+      "vendor_id": 50,
+      "vendor_name": "Harris, Collins and Carney",
+      "month": "2028-03",
+      "monthly_cap": 4420752.0,
+      "monthly_invoiced": 5676354.63,
+      "excess": 1255602.63,
+      "invoice_count": 8,
+      "is_breach": true
+    }
+  ],
+  "evaluated_at": "2026-07-24T17:59:05.464187+00:00",
+  "evaluation_type": "synthetic_fixture_consistency",
+  "policy": "A breach occurs when the sum of a vendor's invoices in a contract-valid calendar month exceeds that vendor's monthly cap.",
+  "generator_version": "monthly-cap-v2",
+  "input": {
+    "ledger_source": "data\\enterprise_ledger.db",
+    "ledger_sha256": "51cfaef31073be78aaf0df0d5377647869bb97cf7003a65777600f129aac9e03",
+    "contracts_sha256": "ebe2c1724b9288d4cd057b6e0f7ad6681a5178e39a26f93999e0c30ac36b90f2",
+    "manifest_sha256": "a102d0e78991fb8b54063b57ddc88104255a6d54b6b4401adcf468ebd4a54ed9"
+  },
+  "limitations": [
+    "The ledger, contracts, labels, and detection policy are all synthetic fixtures.",
+    "Precision and recall here are regression metrics over known generated labels, not independent real-world performance.",
+    "This check assumes one supplied executed contract per vendor and does not resolve amendments or contract-version conflicts."
+  ]
+}

@@ -1,0 +1,26 @@
+CONSULTING SERVICES AGREEMENT
+Vertrag-Nr: CSA-EUR-2024-0156
+Auftragnehmer (Vendor): EuroTech Consulting GmbH
+Auftraggeber (Client): International Manufacturing AG
+Laufzeit (Term): 1 January 2024 to 31 December 2026
+
+ARTIKEL 5: VERGUTUNG UND ZAHLUNGSBEDINGUNGEN (Fees and Payment Terms)
+
+5.1 Monthly Billing Limitation
+The not-to-exceed amount of EUR 62,000 per month covers all consulting
+hours, travel, and ancillary expenses under this agreement. Vendor shall
+not invoice amounts exceeding this monthly ceiling without written
+authorization via change request.
+
+5.2 Payment Terms
+Invoices are payable within 30 days. Late payment interest applies at a
+rate of 3% per month on overdue amounts, consistent with applicable EU
+commercial law.
+
+ARTIKEL 10: DATENSCHUTZ (Data Protection)
+Both parties acknowledge obligations under Regulation (EU) 2016/679 (GDPR).
+Vendor acts as Auftragsverarbeiter (Data Processor). A Data Processing
+Agreement (Auftragsverarbeitungsvertrag) is attached as Appendix B.
+
+NOTE: Demonstration fixture modelled on EU commercial consulting agreement
+structure. Not an actual contract.

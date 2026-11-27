@@ -1,0 +1,29 @@
+MASTER SERVICES AGREEMENT
+Parties: TechOps Consulting Group Inc. ("Vendor") and Sample Corp ("Client")
+Contract Reference: MSA-2023-TC-0847
+Effective: March 15, 2023 — March 14, 2026
+
+SECTION 4. FEES AND PAYMENT
+
+4.1 Not-to-Exceed Amount
+The total monthly not-to-exceed amount for managed infrastructure services
+shall be USD 78,000 per month. Any services requested beyond this ceiling
+require a written change order signed by both parties.
+
+4.2 Invoice Terms
+Client shall pay undisputed invoices within net 45 days of receipt. Vendor
+may charge interest at a rate of 2% per month on past-due amounts after the
+net 45 day period.
+
+SECTION 8. DATA PROTECTION AND PRIVACY
+Vendor represents and warrants that it maintains a comprehensive data
+protection program consistent with GDPR requirements for EU data subjects
+and CCPA for California residents. A Data Processing Addendum (DPA) is
+attached as Schedule C to this Agreement.
+
+SECTION 15. LIMITATION OF LIABILITY
+Vendor's aggregate liability shall not exceed the total fees paid in the
+preceding 3 months.
+
+NOTE: Demonstration fixture modelled on SEC EDGAR 10-K MSA exhibit structure.
+Not an actual filing or contract.

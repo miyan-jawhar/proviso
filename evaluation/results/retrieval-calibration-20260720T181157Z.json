@@ -1,0 +1,340 @@
+{
+  "run_at": "2026-07-20T18:11:57.554627+00:00",
+  "fixture_scope": "Synthetic behavioral calibration only. These scores are not calibrated probabilities and must not be generalized to production contracts.",
+  "manifest": "C:\\Users\\admin\\OneDrive\\\u6587\u6863\\Project\\evaluation\\cases.json",
+  "threshold_tradeoffs": [
+    {
+      "threshold": 0.25,
+      "clear_vendor_coverage": 100.0,
+      "clear_vendor_false_abstention_rate": 0.0,
+      "raw_unknown_vendor_safe_handoff_rate": 0.0,
+      "raw_unknown_vendor_unsafe_retrieval_rate": 100.0,
+      "evidence_gated_unknown_vendor_safe_handoff_rate": 100.0,
+      "evidence_gated_unknown_vendor_unsafe_conclusion_rate": 0.0
+    },
+    {
+      "threshold": 0.3,
+      "clear_vendor_coverage": 100.0,
+      "clear_vendor_false_abstention_rate": 0.0,
+      "raw_unknown_vendor_safe_handoff_rate": 0.0,
+      "raw_unknown_vendor_unsafe_retrieval_rate": 100.0,
+      "evidence_gated_unknown_vendor_safe_handoff_rate": 100.0,
+      "evidence_gated_unknown_vendor_unsafe_conclusion_rate": 0.0
+    },
+    {
+      "threshold": 0.35,
+      "clear_vendor_coverage": 100.0,
+      "clear_vendor_false_abstention_rate": 0.0,
+      "raw_unknown_vendor_safe_handoff_rate": 0.0,
+      "raw_unknown_vendor_unsafe_retrieval_rate": 100.0,
+      "evidence_gated_unknown_vendor_safe_handoff_rate": 100.0,
+      "evidence_gated_unknown_vendor_unsafe_conclusion_rate": 0.0
+    },
+    {
+      "threshold": 0.4,
+      "clear_vendor_coverage": 100.0,
+      "clear_vendor_false_abstention_rate": 0.0,
+      "raw_unknown_vendor_safe_handoff_rate": 0.0,
+      "raw_unknown_vendor_unsafe_retrieval_rate": 100.0,
+      "evidence_gated_unknown_vendor_safe_handoff_rate": 100.0,
+      "evidence_gated_unknown_vendor_unsafe_conclusion_rate": 0.0
+    },
+    {
+      "threshold": 0.45,
+      "clear_vendor_coverage": 93.3,
+      "clear_vendor_false_abstention_rate": 6.7,
+      "raw_unknown_vendor_safe_handoff_rate": 0.0,
+      "raw_unknown_vendor_unsafe_retrieval_rate": 100.0,
+      "evidence_gated_unknown_vendor_safe_handoff_rate": 100.0,
+      "evidence_gated_unknown_vendor_unsafe_conclusion_rate": 0.0
+    },
+    {
+      "threshold": 0.5,
+      "clear_vendor_coverage": 66.7,
+      "clear_vendor_false_abstention_rate": 33.3,
+      "raw_unknown_vendor_safe_handoff_rate": 0.0,
+      "raw_unknown_vendor_unsafe_retrieval_rate": 100.0,
+      "evidence_gated_unknown_vendor_safe_handoff_rate": 100.0,
+      "evidence_gated_unknown_vendor_unsafe_conclusion_rate": 0.0
+    }
+  ],
+  "probes": [
+    {
+      "id": "legal-gdpr-01",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Blake and Sons"
+      ],
+      "top_vendor": "Blake and Sons",
+      "top_score": 0.5491,
+      "vendor_match": true,
+      "retrieval_query": "Blake and Sons contract terms relevant to: Does Blake and Sons contain a GDPR data-protection clause?",
+      "vendor_bound": true,
+      "matched_vendor": "Blake and Sons",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-gdpr-02",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Abbott-Munoz"
+      ],
+      "top_vendor": "Abbott-Munoz",
+      "top_score": 0.5578,
+      "vendor_match": true,
+      "retrieval_query": "Abbott-Munoz contract terms relevant to: Review Abbott-Munoz for GDPR compliance language.",
+      "vendor_bound": true,
+      "matched_vendor": "Abbott-Munoz",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-gdpr-03",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Reid, Ferguson and Sanchez"
+      ],
+      "top_vendor": "Reid, Ferguson and Sanchez",
+      "top_score": 0.49,
+      "vendor_match": true,
+      "retrieval_query": "Reid, Ferguson and Sanchez contract terms relevant to: Is there a GDPR clause in the Reid, Ferguson and Sanchez contract?",
+      "vendor_bound": true,
+      "matched_vendor": "Reid, Ferguson and Sanchez",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-gdpr-04",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Ferrell, Rice and Maddox"
+      ],
+      "top_vendor": "Ferrell, Rice and Maddox",
+      "top_score": 0.5721,
+      "vendor_match": true,
+      "retrieval_query": "Ferrell, Rice and Maddox contract terms relevant to: Find the data-protection terms for Ferrell, Rice and Maddox.",
+      "vendor_bound": true,
+      "matched_vendor": "Ferrell, Rice and Maddox",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-gdpr-05",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Rodriguez LLC"
+      ],
+      "top_vendor": "Rodriguez LLC",
+      "top_score": 0.5525,
+      "vendor_match": true,
+      "retrieval_query": "Rodriguez LLC contract terms relevant to: Check Rodriguez LLC for GDPR obligations.",
+      "vendor_bound": true,
+      "matched_vendor": "Rodriguez LLC",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-penalty-01",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Rodriguez, Figueroa and Sanchez"
+      ],
+      "top_vendor": "Rodriguez, Figueroa and Sanchez",
+      "top_score": 0.4585,
+      "vendor_match": true,
+      "retrieval_query": "Rodriguez, Figueroa and Sanchez contract terms relevant to: What late-payment penalty applies to Rodriguez, Figueroa and Sanchez?",
+      "vendor_bound": true,
+      "matched_vendor": "Rodriguez, Figueroa and Sanchez",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-penalty-02",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Mcclure, Ward and Lee"
+      ],
+      "top_vendor": "Mcclure, Ward and Lee",
+      "top_score": 0.5182,
+      "vendor_match": true,
+      "retrieval_query": "Mcclure, Ward and Lee contract terms relevant to: Review the late-fee clause for Mcclure, Ward and Lee.",
+      "vendor_bound": true,
+      "matched_vendor": "Mcclure, Ward and Lee",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-penalty-03",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Flowers, Martin and Kelly"
+      ],
+      "top_vendor": "Flowers, Martin and Kelly",
+      "top_score": 0.4313,
+      "vendor_match": true,
+      "retrieval_query": "Flowers, Martin and Kelly contract terms relevant to: Is Flowers, Martin and Kelly's penalty provision unusual?",
+      "vendor_bound": true,
+      "matched_vendor": "Flowers, Martin and Kelly",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-penalty-04",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Wilkerson-Day"
+      ],
+      "top_vendor": "Wilkerson-Day",
+      "top_score": 0.4752,
+      "vendor_match": true,
+      "retrieval_query": "Wilkerson-Day contract terms relevant to: Show the late-fee percentage for Wilkerson-Day.",
+      "vendor_bound": true,
+      "matched_vendor": "Wilkerson-Day",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "legal-penalty-05",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Ryan PLC"
+      ],
+      "top_vendor": "Ryan PLC",
+      "top_score": 0.596,
+      "vendor_match": true,
+      "retrieval_query": "Ryan PLC contract terms relevant to: Assess Ryan PLC's payment penalty clause.",
+      "vendor_bound": true,
+      "matched_vendor": "Ryan PLC",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "cross-cap-01",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Mcclain, Miller and Henderson"
+      ],
+      "top_vendor": "Mcclain, Miller and Henderson",
+      "top_score": 0.5756,
+      "vendor_match": true,
+      "retrieval_query": "Mcclain, Miller and Henderson contract terms relevant to: Have invoices for Mcclain, Miller and Henderson exceeded its contract billing cap? monthly billing cap",
+      "vendor_bound": true,
+      "matched_vendor": "Mcclain, Miller and Henderson",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "cross-cap-02",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Davis and Sons"
+      ],
+      "top_vendor": "Davis and Sons",
+      "top_score": 0.5218,
+      "vendor_match": true,
+      "retrieval_query": "Davis and Sons contract terms relevant to: Compare Davis and Sons contract cap with its invoice payments. monthly billing cap",
+      "vendor_bound": true,
+      "matched_vendor": "Davis and Sons",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "cross-cap-03",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Perez Inc"
+      ],
+      "top_vendor": "Perez Inc",
+      "top_score": 0.4913,
+      "vendor_match": true,
+      "retrieval_query": "Perez Inc contract terms relevant to: Check whether Perez Inc billing exceeds the maximum allowed by its agreement.",
+      "vendor_bound": true,
+      "matched_vendor": "Perez Inc",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "cross-cap-04",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "Harrell LLC"
+      ],
+      "top_vendor": "Harrell LLC",
+      "top_score": 0.6142,
+      "vendor_match": true,
+      "retrieval_query": "Harrell LLC contract terms relevant to: Audit Harrell LLC for contract cap overruns using the invoice ledger. monthly billing cap",
+      "vendor_bound": true,
+      "matched_vendor": "Harrell LLC",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "cross-cap-05",
+      "kind": "clear_vendor",
+      "expected_vendors": [
+        "George Group"
+      ],
+      "top_vendor": "George Group",
+      "top_score": 0.5731,
+      "vendor_match": true,
+      "retrieval_query": "George Group contract terms relevant to: Are George Group payments compliant with its contract cap? monthly billing cap",
+      "vendor_bound": true,
+      "matched_vendor": "George Group",
+      "unmatched_vendor_reference": null,
+      "evidence_gate": "retrieval_threshold"
+    },
+    {
+      "id": "adversarial-unknown-vendor",
+      "kind": "unknown_vendor",
+      "expected_vendors": [],
+      "top_vendor": "Baker and Sons",
+      "top_score": 0.5362,
+      "vendor_match": false,
+      "retrieval_query": "Does Quantum Meridian Holdings have a GDPR clause in its contract?",
+      "vendor_bound": false,
+      "matched_vendor": null,
+      "unmatched_vendor_reference": "Quantum Meridian Holdings",
+      "evidence_gate": "human_review_unrecognized_vendor"
+    },
+    {
+      "id": "adversarial-unknown-vendor-02",
+      "kind": "unknown_vendor",
+      "expected_vendors": [],
+      "top_vendor": "Doyle Ltd",
+      "top_score": 0.5304,
+      "vendor_match": false,
+      "retrieval_query": "Review Atlas Strategic Partners for GDPR obligations.",
+      "vendor_bound": false,
+      "matched_vendor": null,
+      "unmatched_vendor_reference": "Atlas Strategic Partners",
+      "evidence_gate": "human_review_unrecognized_vendor"
+    },
+    {
+      "id": "adversarial-unknown-vendor-03",
+      "kind": "unknown_vendor",
+      "expected_vendors": [],
+      "top_vendor": "Davis and Sons",
+      "top_score": 0.5728,
+      "vendor_match": false,
+      "retrieval_query": "What termination protection exists for Northstar Procurement Services?",
+      "vendor_bound": false,
+      "matched_vendor": null,
+      "unmatched_vendor_reference": "Northstar Procurement Services",
+      "evidence_gate": "human_review_unrecognized_vendor"
+    },
+    {
+      "id": "adversarial-unknown-vendor-04",
+      "kind": "unknown_vendor",
+      "expected_vendors": [],
+      "top_vendor": "Henderson, Ramirez and Lewis",
+      "top_score": 0.5889,
+      "vendor_match": false,
+      "retrieval_query": "Does Everline Data Systems meet GDPR requirements under its contract?",
+      "vendor_bound": false,
+      "matched_vendor": null,
+      "unmatched_vendor_reference": "Everline Data Systems",
+      "evidence_gate": "human_review_unrecognized_vendor"
+    }
+  ]
+}

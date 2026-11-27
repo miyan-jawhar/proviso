@@ -1,0 +1,308 @@
+{
+  "run_at": "2026-07-20T19:07:29.564645+00:00",
+  "api_url": "http://localhost:8000",
+  "manifest": "C:\\Users\\admin\\OneDrive\\\u6587\u6863\\Project\\evaluation\\cases.json",
+  "summary": {
+    "case_pass_rate": 100.0,
+    "routing_accuracy": 100.0,
+    "citation_recall_at_k": 100.0,
+    "sql_trace_coverage": 100.0,
+    "answer_assertion_coverage": 100.0,
+    "safety_rejection_rate": null,
+    "human_review_handoff_rate": null,
+    "unsafe_uncertainty_conclusion_rate": null,
+    "clear_case_false_abstention_rate": 0.0
+  },
+  "records": [
+    {
+      "id": "finance-spend-01",
+      "category": "finance_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [
+        "SELECT v.vendor_name, SUM(i.amount_due) AS total_invoiced FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Doyle Ltd' AND CAST(strftime('%Y', i.invoice_date) AS INTEGER) = 2025 GROUP BY v.vendor_name"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Doyle Ltd\n- Total invoiced amount in 2025: [('Doyle Ltd', 19518316.68)]\n- This value was calculated with the read-only SQL shown below.\nRISK_LEVEL: REVIEW\n\n\n### SQL Queries Executed\n\n```sql\nSELECT v.vendor_name, SUM(i.amount_due) AS total_invoiced FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Doyle Ltd' AND CAST(strftime('%Y', i.invoice_date) AS INTEGER) = 2025 GROUP BY v.vendor_name\n```"
+    },
+    {
+      "id": "finance-overdue-01",
+      "category": "finance_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [
+        "SELECT v.vendor_name, COUNT(*) AS overdue_invoice_count FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Ryan PLC' AND i.payment_status = 'OVERDUE' GROUP BY v.vendor_name"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Ryan PLC\n- Overdue invoice count: [('Ryan PLC', 13)]\n- This value was calculated with the read-only SQL shown below.\nRISK_LEVEL: REVIEW\n\n\n### SQL Queries Executed\n\n```sql\nSELECT v.vendor_name, COUNT(*) AS overdue_invoice_count FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Ryan PLC' AND i.payment_status = 'OVERDUE' GROUP BY v.vendor_name\n```"
+    },
+    {
+      "id": "finance-overdue-02",
+      "category": "finance_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [
+        "SELECT v.vendor_name, SUM(i.amount_due) AS total_overdue_amount FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Henderson, Ramirez and Lewis' AND i.payment_status = 'OVERDUE' GROUP BY v.vendor_name"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Henderson, Ramirez and Lewis\n- Total overdue amount: [('Henderson, Ramirez and Lewis', 666949.45)]\n- This value was calculated with the read-only SQL shown below.\nRISK_LEVEL: REVIEW\n\n\n### SQL Queries Executed\n\n```sql\nSELECT v.vendor_name, SUM(i.amount_due) AS total_overdue_amount FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Henderson, Ramirez and Lewis' AND i.payment_status = 'OVERDUE' GROUP BY v.vendor_name\n```"
+    },
+    {
+      "id": "finance-duplicates-01",
+      "category": "finance_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [
+        "SELECT v.vendor_name, i.invoice_date, i.amount_due, COUNT(*) AS duplicate_count FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Mcclain, Miller and Henderson' GROUP BY v.vendor_name, i.invoice_date, i.amount_due HAVING COUNT(*) > 1 ORDER BY duplicate_count DESC"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Mcclain, Miller and Henderson\n- Potential duplicate invoice payments: [('Mcclain, Miller and Henderson', '2026-03-21', 100222.13, 2)]\n- This value was calculated with the read-only SQL shown below.\nRISK_LEVEL: REVIEW\n\n\n### SQL Queries Executed\n\n```sql\nSELECT v.vendor_name, i.invoice_date, i.amount_due, COUNT(*) AS duplicate_count FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Mcclain, Miller and Henderson' GROUP BY v.vendor_name, i.invoice_date, i.amount_due HAVING COUNT(*) > 1 ORDER BY duplicate_count DESC\n```"
+    },
+    {
+      "id": "finance-spend-02",
+      "category": "finance_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [],
+      "sql_queries": [
+        "SELECT v.vendor_name, AVG(i.amount_due) AS average_invoice_amount FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Davis and Sons' GROUP BY v.vendor_name"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Davis and Sons\n- Average invoice amount: [('Davis and Sons', 45557.070972222224)]\n- This value was calculated with the read-only SQL shown below.\nRISK_LEVEL: REVIEW\n\n\n### SQL Queries Executed\n\n```sql\nSELECT v.vendor_name, AVG(i.amount_due) AS average_invoice_amount FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Davis and Sons' GROUP BY v.vendor_name\n```"
+    },
+    {
+      "id": "cross-cap-01",
+      "category": "cross_agent_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [
+        "Mcclain, Miller and Henderson"
+      ],
+      "sql_queries": [
+        "SELECT v.vendor_name, strftime('%Y-%m', i.invoice_date) AS invoice_month, SUM(i.amount_due) AS monthly_invoiced, 456170 AS monthly_cap, SUM(i.amount_due) - 456170 AS excess FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Mcclain, Miller and Henderson' AND i.invoice_date BETWEEN '2024-04-30' AND '2027-04-15' GROUP BY v.vendor_name, strftime('%Y-%m', i.invoice_date) HAVING SUM(i.amount_due) > 456170 ORDER BY invoice_month"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Legal Agent**:\nFINDINGS:\n- The cited contract sets a maximum monthly billing cap of INR 456,170 for Mcclain, Miller and Henderson (source: contract_003_Mcclain_Miller_and_Henderson.pdf, page 2; term: 2024-04-30 to 2027-04-15).\n- This evidence establishes a monthly aggregate comparison policy; the finance agent must compare the sum of invoices in each calendar month.\nRISK_LEVEL: MEDIUM\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Mcclain, Miller and Henderson\n- Cited monthly cap: INR 456,170\n- Contract term evaluated: 2024-04-30 to 2027-04-15\n- BREACH: 4 calendar month(s) exceeded the cited monthly cap.\n- Read-only monthly aggregation result: [('Mcclain, Miller and Henderson', '2024-04', 715616.37, 456170, 259446.37), ('Mcclain, Miller and Henderson', '2024-07', 667771.34, 456170, 211601.33999999997), ('Mcclain, Miller and Henderson', '2025-12', 631719.39, 456170, 175549.39), ('Mcclain, Miller and Henderson', '2026-03', 759523.5800000001, 456170, 303353.5800000001)]\nRI"
+    },
+    {
+      "id": "cross-cap-02",
+      "category": "cross_agent_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [
+        "Davis and Sons"
+      ],
+      "sql_queries": [
+        "SELECT v.vendor_name, strftime('%Y-%m', i.invoice_date) AS invoice_month, SUM(i.amount_due) AS monthly_invoiced, 497458 AS monthly_cap, SUM(i.amount_due) - 497458 AS excess FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Davis and Sons' AND i.invoice_date BETWEEN '2025-06-25' AND '2027-06-15' GROUP BY v.vendor_name, strftime('%Y-%m', i.invoice_date) HAVING SUM(i.amount_due) > 497458 ORDER BY invoice_month"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Legal Agent**:\nFINDINGS:\n- The cited contract sets a maximum monthly billing cap of INR 497,458 for Davis and Sons (source: contract_004_Davis_and_Sons.pdf, page 2; term: 2025-06-25 to 2027-06-15).\n- This evidence establishes a monthly aggregate comparison policy; the finance agent must compare the sum of invoices in each calendar month.\nRISK_LEVEL: MEDIUM\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Davis and Sons\n- Cited monthly cap: INR 497,458\n- Contract term evaluated: 2025-06-25 to 2027-06-15\n- BREACH: 4 calendar month(s) exceeded the cited monthly cap.\n- Read-only monthly aggregation result: [('Davis and Sons', '2025-10', 644925.34, 497458, 147467.33999999997), ('Davis and Sons', '2026-01', 698846.09, 497458, 201388.08999999997), ('Davis and Sons', '2026-02', 793648.91, 497458, 296190.91000000003), ('Davis and Sons', '2027-05', 773901.97, 497458, 276443.97)]\nRISK_LEVEL: HIGH\n\n\n### Sources Cited\n\n- **contract_004_Davis_and_Sons.pdf**, Page 3: 8.1\nThis Agreement "
+    },
+    {
+      "id": "cross-cap-03",
+      "category": "cross_agent_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [
+        "Perez Inc"
+      ],
+      "sql_queries": [
+        "SELECT v.vendor_name, strftime('%Y-%m', i.invoice_date) AS invoice_month, SUM(i.amount_due) AS monthly_invoiced, 310430 AS monthly_cap, SUM(i.amount_due) - 310430 AS excess FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Perez Inc' AND i.invoice_date BETWEEN '2026-01-25' AND '2029-01-09' GROUP BY v.vendor_name, strftime('%Y-%m', i.invoice_date) HAVING SUM(i.amount_due) > 310430 ORDER BY invoice_month"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Legal Agent**:\nLLM analysis failed: Error calling model 'gemini-3.5-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash\\nPlease retry in 31.285385945s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequests"
+    },
+    {
+      "id": "cross-cap-04",
+      "category": "cross_agent_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [
+        "Harrell LLC"
+      ],
+      "sql_queries": [
+        "SELECT v.vendor_name, strftime('%Y-%m', i.invoice_date) AS invoice_month, SUM(i.amount_due) AS monthly_invoiced, 317776 AS monthly_cap, SUM(i.amount_due) - 317776 AS excess FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'Harrell LLC' AND i.invoice_date BETWEEN '2023-12-17' AND '2026-12-01' GROUP BY v.vendor_name, strftime('%Y-%m', i.invoice_date) HAVING SUM(i.amount_due) > 317776 ORDER BY invoice_month"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Legal Agent**:\nFINDINGS:\n- The cited contract sets a maximum monthly billing cap of INR 317,776 for Harrell LLC (source: contract_039_Harrell_LLC.pdf, page 2; term: 2023-12-17 to 2026-12-01).\n- This evidence establishes a monthly aggregate comparison policy; the finance agent must compare the sum of invoices in each calendar month.\nRISK_LEVEL: MEDIUM\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: Harrell LLC\n- Cited monthly cap: INR 317,776\n- Contract term evaluated: 2023-12-17 to 2026-12-01\n- BREACH: 4 calendar month(s) exceeded the cited monthly cap.\n- Read-only monthly aggregation result: [('Harrell LLC', '2024-01', 442041.41000000003, 317776, 124265.41000000003), ('Harrell LLC', '2024-02', 437690.68, 317776, 119914.68), ('Harrell LLC', '2025-01', 399413.35, 317776, 81637.34999999998), ('Harrell LLC', '2025-06', 474294.51, 317776, 156518.51)]\nRISK_LEVEL: HIGH\n\n\n### Sources Cited\n\n- **contract_039_Harrell_LLC.pdf**, Page 3: 8.1\nThis Agreement shall be governed by the "
+    },
+    {
+      "id": "cross-cap-05",
+      "category": "cross_agent_ground_truth",
+      "expected_status": 200,
+      "actual_status": 200,
+      "checks": {
+        "http_status": true,
+        "routing": true,
+        "citation": true,
+        "sql_trace": true,
+        "answer_terms": true,
+        "no_review_escalation": true
+      },
+      "passed": true,
+      "trace_agents": [
+        "supervisor",
+        "legal_agent",
+        "supervisor",
+        "finance_agent",
+        "supervisor"
+      ],
+      "citation_vendors": [
+        "George Group"
+      ],
+      "sql_queries": [
+        "SELECT v.vendor_name, strftime('%Y-%m', i.invoice_date) AS invoice_month, SUM(i.amount_due) AS monthly_invoiced, 443557 AS monthly_cap, SUM(i.amount_due) - 443557 AS excess FROM invoices AS i JOIN vendors AS v ON v.vendor_id = i.vendor_id WHERE v.vendor_name = 'George Group' AND i.invoice_date BETWEEN '2025-08-23' AND '2030-07-28' GROUP BY v.vendor_name, strftime('%Y-%m', i.invoice_date) HAVING SUM(i.amount_due) > 443557 ORDER BY invoice_month"
+      ],
+      "error_log": [],
+      "review_escalations": [],
+      "answer_preview": "## Analysis Report\n\n\n**Legal Agent**:\nFINDINGS:\n- The cited contract sets a maximum monthly billing cap of INR 443,557 for George Group (source: contract_042_George_Group.pdf, page 2; term: 2025-08-23 to 2030-07-28).\n- This evidence establishes a monthly aggregate comparison policy; the finance agent must compare the sum of invoices in each calendar month.\nRISK_LEVEL: MEDIUM\n\n**Finance Agent**:\nFINDINGS:\n- Vendor: George Group\n- Cited monthly cap: INR 443,557\n- Contract term evaluated: 2025-08-23 to 2030-07-28\n- BREACH: 4 calendar month(s) exceeded the cited monthly cap.\n- Read-only monthly aggregation result: [('George Group', '2025-08', 555518.22, 443557, 111961.21999999997), ('George Group', '2025-10', 599188.97, 443557, 155631.96999999997), ('George Group', '2026-02', 682035.84, 443557, 238478.83999999997), ('George Group', '2026-03', 583697.16, 443557, 140140.16000000003)]\nRISK_LEVEL: HIGH\n\n\n### Sources Cited\n\n- **contract_042_George_Group.pdf**, Page 1: Contract No: CNT-25220\nMAS"
+    }
+  ]
+}
