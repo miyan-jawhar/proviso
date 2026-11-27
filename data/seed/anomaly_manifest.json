@@ -1,0 +1,332 @@
+{
+  "generator_version": "monthly-cap-v2",
+  "random_seed": 42,
+  "monthly_cap_policy": "A breach occurs when the sum of a vendor's invoices in a contract-valid calendar month exceeds that vendor's monthly cap.",
+  "base_invoice_count": 10000,
+  "total_invoice_count": 10015,
+  "controlled_breach_periods": 30,
+  "observed_monthly_breaches": [
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2024-04",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 715616.37,
+      "excess": 259446.37
+    },
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2024-07",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 667771.34,
+      "excess": 211601.34
+    },
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2025-12",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 631719.39,
+      "excess": 175549.39
+    },
+    {
+      "vendor_id": 3,
+      "vendor_name": "Mcclain, Miller and Henderson",
+      "month": "2026-03",
+      "monthly_cap": 456170.0,
+      "monthly_invoiced": 759523.58,
+      "excess": 303353.58
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2025-10",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 644925.34,
+      "excess": 147467.34
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2026-01",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 698846.09,
+      "excess": 201388.09
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2026-02",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 793648.91,
+      "excess": 296190.91
+    },
+    {
+      "vendor_id": 4,
+      "vendor_name": "Davis and Sons",
+      "month": "2027-05",
+      "monthly_cap": 497458.0,
+      "monthly_invoiced": 773901.97,
+      "excess": 276443.97
+    },
+    {
+      "vendor_id": 5,
+      "vendor_name": "Guzman, Hoffman and Baldwin",
+      "month": "2026-09",
+      "monthly_cap": 1885185.0,
+      "monthly_invoiced": 2462298.12,
+      "excess": 577113.12
+    },
+    {
+      "vendor_id": 5,
+      "vendor_name": "Guzman, Hoffman and Baldwin",
+      "month": "2027-07",
+      "monthly_cap": 1885185.0,
+      "monthly_invoiced": 2886191.57,
+      "excess": 1001006.57
+    },
+    {
+      "vendor_id": 21,
+      "vendor_name": "Gray-Mayo",
+      "month": "2024-01",
+      "monthly_cap": 3599817.0,
+      "monthly_invoiced": 5595386.34,
+      "excess": 1995569.34
+    },
+    {
+      "vendor_id": 21,
+      "vendor_name": "Gray-Mayo",
+      "month": "2024-06",
+      "monthly_cap": 3599817.0,
+      "monthly_invoiced": 5662476.56,
+      "excess": 2062659.56
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2026-04",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 389656.7,
+      "excess": 79226.7
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2027-06",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 393003.33,
+      "excess": 82573.33
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2027-10",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 444780.66,
+      "excess": 134350.66
+    },
+    {
+      "vendor_id": 23,
+      "vendor_name": "Perez Inc",
+      "month": "2027-12",
+      "monthly_cap": 310430.0,
+      "monthly_invoiced": 450758.64,
+      "excess": 140328.64
+    },
+    {
+      "vendor_id": 38,
+      "vendor_name": "Baker, Mason and White",
+      "month": "2026-04",
+      "monthly_cap": 1923474.0,
+      "monthly_invoiced": 2979063.17,
+      "excess": 1055589.17
+    },
+    {
+      "vendor_id": 38,
+      "vendor_name": "Baker, Mason and White",
+      "month": "2026-06",
+      "monthly_cap": 1923474.0,
+      "monthly_invoiced": 2568484.8,
+      "excess": 645010.8
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2024-01",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 442041.41,
+      "excess": 124265.41
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2024-02",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 437690.68,
+      "excess": 119914.68
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2025-01",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 399413.35,
+      "excess": 81637.35
+    },
+    {
+      "vendor_id": 39,
+      "vendor_name": "Harrell LLC",
+      "month": "2025-06",
+      "monthly_cap": 317776.0,
+      "monthly_invoiced": 474294.51,
+      "excess": 156518.51
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2025-08",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 555518.22,
+      "excess": 111961.22
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2025-10",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 599188.97,
+      "excess": 155631.97
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2026-02",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 682035.84,
+      "excess": 238478.84
+    },
+    {
+      "vendor_id": 42,
+      "vendor_name": "George Group",
+      "month": "2026-03",
+      "monthly_cap": 443557.0,
+      "monthly_invoiced": 583697.16,
+      "excess": 140140.16
+    },
+    {
+      "vendor_id": 48,
+      "vendor_name": "Martin, Rose and Obrien",
+      "month": "2024-06",
+      "monthly_cap": 4501196.0,
+      "monthly_invoiced": 6117841.23,
+      "excess": 1616645.23
+    },
+    {
+      "vendor_id": 48,
+      "vendor_name": "Martin, Rose and Obrien",
+      "month": "2025-01",
+      "monthly_cap": 4501196.0,
+      "monthly_invoiced": 7021725.46,
+      "excess": 2520529.46
+    },
+    {
+      "vendor_id": 50,
+      "vendor_name": "Harris, Collins and Carney",
+      "month": "2027-06",
+      "monthly_cap": 4420752.0,
+      "monthly_invoiced": 7015974.18,
+      "excess": 2595222.18
+    },
+    {
+      "vendor_id": 50,
+      "vendor_name": "Harris, Collins and Carney",
+      "month": "2028-03",
+      "monthly_cap": 4420752.0,
+      "monthly_invoiced": 5676354.63,
+      "excess": 1255602.63
+    }
+  ],
+  "duplicate_payment_signatures": [
+    {
+      "vendor_id": 8,
+      "invoice_date": "2025-11-30",
+      "amount_due": 124392.82
+    },
+    {
+      "vendor_id": 33,
+      "invoice_date": "2027-01-31",
+      "amount_due": 299507.86
+    },
+    {
+      "vendor_id": 22,
+      "invoice_date": "2024-11-01",
+      "amount_due": 352767.9
+    },
+    {
+      "vendor_id": 29,
+      "invoice_date": "2026-12-18",
+      "amount_due": 213359.98
+    },
+    {
+      "vendor_id": 3,
+      "invoice_date": "2026-03-21",
+      "amount_due": 100222.13
+    },
+    {
+      "vendor_id": 44,
+      "invoice_date": "2025-12-17",
+      "amount_due": 263781.76
+    },
+    {
+      "vendor_id": 32,
+      "invoice_date": "2026-03-30",
+      "amount_due": 158763.51
+    },
+    {
+      "vendor_id": 11,
+      "invoice_date": "2027-08-08",
+      "amount_due": 201572.65
+    },
+    {
+      "vendor_id": 47,
+      "invoice_date": "2025-09-16",
+      "amount_due": 289265.03
+    },
+    {
+      "vendor_id": 26,
+      "invoice_date": "2026-06-28",
+      "amount_due": 83648.98
+    },
+    {
+      "vendor_id": 15,
+      "invoice_date": "2024-08-23",
+      "amount_due": 243680.93
+    },
+    {
+      "vendor_id": 10,
+      "invoice_date": "2026-04-29",
+      "amount_due": 175788.66
+    },
+    {
+      "vendor_id": 10,
+      "invoice_date": "2025-11-19",
+      "amount_due": 167921.62
+    },
+    {
+      "vendor_id": 19,
+      "invoice_date": "2023-10-14",
+      "amount_due": 432929.17
+    },
+    {
+      "vendor_id": 2,
+      "invoice_date": "2026-12-05",
+      "amount_due": 231562.38
+    }
+  ],
+  "overdue_vendor_ids": [
+    10,
+    14,
+    49
+  ]
+}
