@@ -32,6 +32,11 @@ jobs:
         run: |
           ruff check backend/ --ignore E501,F401,W291,W293 || true
 
+      - name: Prepare test fixtures and database
+        run: |
+          python scripts/generate_invoices.py
+          python scripts/seed_database.py --reset
+
       - name: Run unit tests
         env:
           LLM_PROVIDER: gemini
